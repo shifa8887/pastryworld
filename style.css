@@ -1,0 +1,245 @@
+/* Base Styles */
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    position: relative;
+    color: #fff;
+    background-image: url('./image/about_page.jpg');
+    min-height: 60vh;
+    width: 100%;
+    background-position:  top center;
+    background-size: cover;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 350px;
+    /* align-items: center; */
+   
+
+}
+
+.logo {
+    height: 100px;
+    background-color: beige;
+}
+.nav-list {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-list a {
+    color:  pink;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    color: rgb(194, 62, 84);
+}
+
+.menu-btn {
+    display: none;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    color:pink;
+    cursor: pointer;
+}
+.menu-btn:hover{
+    background-color: rgb(194, 62, 84);
+}
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.btn-main {
+    margin-top: -200px;
+    background: pink;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.btn-main:hover {
+    background: rgb(194, 62, 84);
+    color: whitesmoke;
+}
+
+#outlets, #menu, #review {
+    padding: 60px 20px;
+    text-align: center;
+    font-family: "Baskervville SC", serif;
+
+}
+.review, .tes{
+    background-color: whitesmoke;
+
+}
+
+.outlets, .menu, .review {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.outlet, .item, .types:hover
+{
+   cursor: pointer;
+   transform: translatey(10px);
+}
+.outlet, .item, .types {
+    flex: 1;
+    max-width: 300px;
+    background-color: rgb(245, 187, 196);
+    overflow: hidden;
+    animation: cardFadeIn 5s ease-out;
+    border-radius: 15px;
+}
+
+@keyframes  cardFadeIn {
+    from
+    {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to
+    {
+      
+        opacity: 1;
+        transform: translateY(0);  
+    }
+}
+
+.outlet img, .item img, .types img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+footer {
+    background: rgb(245, 187, 196);
+    color: white;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+    color: rgb(194, 62, 84);
+}
+#res
+{
+    background: white;
+    border-radius: 5px;
+}
+#res:hover{
+    cursor: pointer;
+    background-color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 868px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right:0;
+        width: 100%;
+        background:black;
+    }
+    
+    .nav-list.active {
+        display: flex;
+    }
+    
+    .menu-btn {
+        display: block;
+        position: fixed;
+       margin-left: -120px;
+        
+    }
+    
+    #hero {
+        padding: 20px;
+    }
+
+    .outlets, .menu, .review {
+        flex-direction: column;
+    }
+
+    .outlet, .item, .types {
+        max-width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items:center;
+}
+}
+html{
+    scroll-behavior: smooth;
+}
